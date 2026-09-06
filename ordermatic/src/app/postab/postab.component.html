@@ -1,0 +1,181 @@
+<div class="postop">
+  <div class="navbarhome">
+    <app-navbar (demotab)="demotab()"></app-navbar>
+  </div>
+  <div class="posfirst container mt-5">
+    <div class="row mx-auto ">
+      <div class="col-6 d-flex flex-column gap-3 align-items-start justify-content-center">
+        <h1 class="posherotitle"> Advanced POS & Billing Software</h1>
+        <p class="fs-5 w-75" style="text-align: justify;">
+          Transform your food business with Ordermatic, the ultimate cloud-based solution to elevate your customer
+          experiences and boost your business.
+        </p>
+        <button class="btn_orange btn" (click)="demotab()">Book a Demo</button>
+
+      </div>
+      <div class="col-6">
+        <img src="../../assets/imagesVideos/posherosection.png" alt="" class="w-100">
+      </div>
+    </div>
+    <div class="mx-auto my-5">
+      <h1 class="fw-medium text-center"> Trusted by <span class="fw-bold">1000+ restaurants</span></h1>
+      <div class="posmainimg  mt-5">
+        <div class="posimgloop" *ngFor="let item of logos">
+          <img [src]="item?.img" alt="" class="">
+        </div>
+      </div>
+    </div>
+    <div class="mx-auto advancedPos">
+      <p class="fn_or fw-semibold text-center">ADVANCED POS & BILLING SOFTWARE FEATURES</p>
+      <h1 class="w-50 fw-bold text-center mx-auto">POS That Understands Your
+        Restaurant Needs</h1>
+      <p class="w-75 mx-auto text-center mt-2">
+        Discover our restaurant billing software, designed to effortlessly manage high order volumes with ease and
+        precision. Experience seamless performance that simplifies your billing process, ensuring efficiency and
+        accuracy every step of the way
+      </p>
+      <div class="row my-4" *ngFor="let item of posrestaurent">
+        <div class="col-6">
+          <img [src]="item.img" alt="" class="w-100">
+        </div>
+        <div class="col-6  d-flex justify-content-end align-items-center">
+          <div class="d-flex gap-3 flex-column  ">
+            <h2 class="">{{item.title}} </h2>
+            <p class="">{{item.matter}} </p>
+            <p class="fw-semibold cursor" (click)="navigate(item.type)">{{item.end}}<i
+                class="ri-arrow-right-long-line fw-normal"></i></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mx-auto my-5">
+      <h1 class="w-50 fw-bold text-center mx-auto">Integrated App Ecosystem
+      </h1>
+      <p class="w-75 mx-auto text-center mt-2">
+        Seamlessly connect essential tools and services — from payments to delivery and beyond — all within the
+        Ordermatic platform. One ecosystem, endless possibilities.
+      </p>
+
+      <div class="row">
+        <div class="col-6 d-flex flex-column my-4" *ngFor="let item of intefrated">
+          <img class="w-100" [src]="item.img" alt="">
+          <div class="d-flex flex-column mt-5 gap-2">
+            <h3 class=" fw-semibold ">{{item.title}} </h3>
+            <p class=" fs-6  " style="text-align: justify;">{{item.matter}} </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="my-5">
+      <div class="row">
+        <div class="col-6 d-flex flex-column align-items-start justify-content-center">
+          <p class="fn_or">INTEGRATIONS</p>
+          <h2 class="fw-bold w-75">Multiple Integrations. One Powerful View.</h2>
+          <p class="w-75">
+            Enjoy unlimited third-party integrations managed seamlessly through Ordermatic POS
+          </p>
+        </div>
+        <div class="col-5">
+          <img src="../../assets/imagesVideos/integration.png" alt="" class="w-100">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="outlet">
+    <img src="../../assets/imagesVideos/pattern.webp" alt="" class="w-100">
+    <div class="container outletlogo d-flex flex-column align-items-center gap-3 my-5">
+      <h5 class="m-0 fw-semibold"> OUTLET TYPES</h5>
+      <h1 class="m-0 fw-semibold">Built for all types of food business</h1>
+      <p class="w-50 m-0 text-center fw-semibold">The all-in-one Restaurant Management System for all types of
+        restaurant formats and food outlets</p>
+      <div class="row">
+        <div class="col-2 mx-3 outletsLoop my-5" *ngFor="let item of outlets">
+          <img [src]="item.img" alt="" class="">
+          <h4 class="text-center">{{item.name}} </h4>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="poslast my-4 container py-5 ">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000"
+      data-bs-pause="false">
+
+      <!-- Dots -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1">
+        </button>
+
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2">
+        </button>
+
+      </div>
+
+      <!-- Slides -->
+      <div class="carousel-inner">
+
+        <div class="carousel-item active">
+          <div class="row">
+
+            <div class="col-6">
+              <img src="../../assets/imagesVideos/goldencave.png" alt="" class="w-50 float-end me-5">
+            </div>
+
+            <div class="col-6 d-flex justify-content-center align-items-center">
+              <div class="w-75">
+
+                <p style="text-align: justify;">
+                  The Golden Cave testimonial "We’ve used a couple of POS
+                  systems before, but none came close to the support we get
+                  from Ordermatic. Any time we have a question or need help,
+                  their team is just a call or message away—and they actually
+                  listen and solve things fast.
+                </p>
+
+                <p class="fw-semibold">The Golden Cave</p>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+        <div class="carousel-item">
+          <div class="row">
+
+            <div class="col-6">
+              <img src="../../assets/imagesVideos/sridevi.png" alt="" class="w-50 float-end me-5">
+            </div>
+
+            <div class="col-6 d-flex justify-content-center align-items-center">
+              <div class="w-75">
+
+                <p style="text-align: justify;">
+                  "Moving to Ordermatic across all our franchise outlets has
+                  made things so much easier. It’s simple to use, our new
+                  partners get the hang of it quickly, and we finally have
+                  one system that keeps everything consistent.
+                </p>
+
+                <p class="fw-semibold">Royal Sri Devi</p>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+
+  </div>
+    <div class="demo container" id="demotabhome">
+<app-demo></app-demo>
+    </div>
+  <div class="contact mb-5">
+    <app-contact></app-contact>
+  </div>
+</div>

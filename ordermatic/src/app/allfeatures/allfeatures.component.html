@@ -1,0 +1,151 @@
+<div class="allfeatures">
+  <div class="navbarhome">
+    <app-navbar (demotab)="demotab()"></app-navbar>
+  </div>
+  <div class="allfeatureshero container mt-5">
+    <div class="row mx-auto ">
+      <div class="col-6 d-flex flex-column gap-3 align-items-start justify-content-center">
+        <h1 class="posherotitle"> Smart, Simple Billing Software That Scales With Your Business</h1>
+        <p class="fs-5 w-75" style="text-align: justify;">
+          Experience the future of food business management. Contact us today to schedule a demo and see how Ordermatic
+          can transform your business
+        </p>
+        <button class="btn_orange btn" (click)="demotab()">Book a Demo</button>
+
+      </div>
+      <div class="col-6">
+        <img src="../../assets/imagesVideos/allfeaturestop.png" alt="" class="w-100">
+      </div>
+    </div>
+
+    <div class="mx-auto my-5">
+      <h1 class="w-50 fw-bold text-center mx-auto">An all-rounder restaurant billing software</h1>
+
+      <div class="row">
+        <div class="col-6 d-flex flex-column my-4" *ngFor="let item of intefrated">
+          <img class="w-100" [src]="item.img" alt="">
+          <div class="d-flex flex-column mt-5 gap-2">
+            <h3 class=" fw-semibold ">{{item.title}} </h3>
+            <p class=" fs-6  " style="text-align: justify;">{{item.matter}} </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="quick">
+    <div class="container my-5">
+      <h1 class="posherotitle"> Quick. Simple. Powerful. Everything You Need in a POS.</h1>
+
+      <p class="w-75 fs-5 mx-auto text-center mt-2">
+        Easily integrate Ordermatic billing software into your current setup — simple, smooth, and efficient.
+      </p>
+
+      <div class="row mx-auto mt-5">
+        <div class="col-6">
+          <img src="../../assets/imagesVideos/quick-simple.webp" alt="" class="w-100">
+        </div>
+        <div class="col-6 ">
+          <div class="row">
+            <div class="col-6 my-3 d-flex flex-column gap-3 align-items-center" *ngFor="let item of quickItems">
+              <img [src]=" item.img" alt="" class="w-25">
+              <p class="w-75 text-center fw-semibold">{{item.matter}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="morethan">
+    <div class="container my-5">
+      <h2 class="text-center fw-semibold"> More Than Billing — A Complete Solution for Restaurant Growth</h2>
+
+      <p class="w-75 fs-5 mx-auto text-center mt-2">
+        Ordermatic brings every restaurant operation together on a single, easy-to-use POS platform.
+      </p>
+
+      <div class="row mx-auto mt-5 ">
+
+        <div class="col-4  p-0  " *ngFor="let item of morethanthe">
+          <div class="moreloop border border-1 d-flex flex-column gap-3">
+            <img [src]=" item.img" alt="" class="w-25">
+            <div class="">
+              <h4 class="">
+                {{item.title}}
+              </h4>
+
+              <p class=" " style="text-align: justify; font-size: 17px;">{{item.matter}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="service">
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <h1 class="">Serving 1,000+ successful for businesses and counting</h1>
+          <p class="">Ordermatic POS is helping restaurants streamline operations and boost growth.</p>
+        </div>
+        <div class="col-6">
+          <div class="stats-section">
+
+            <div class="stat-card">
+              <h2>2L+</h2>
+              <p>
+                bills processed<br>
+                everyday
+              </p>
+            </div>
+
+            <div class="stat-card">
+              <h2>&lt; 1day</h2>
+              <p>
+                to set up the<br>
+                POS<br>
+                system
+              </p>
+            </div>
+
+            <div class="stat-card">
+              <h2>150+</h2>
+              <p>
+                hardware can<br>
+                be<br>
+                integrated
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-6">
+          <p class="w-75 fs-6 lh-lg">"Ordermatic has been a true game changer for our restaurant operations. The POS
+            system is fast, reliable, and thoughtfully equipped with features that drive real operational value. From QR
+            code-based ordering to seamless billing and smooth kitchen coordination, every aspect is built for
+            efficiency and ease of use. Our staff adapted quickly, and we’ve seen a noticeable uplift in both service
+            speed and customer satisfaction. The ability to remotely monitor and manage our restaurant adds a new level
+            of convenience and control. Ordermatic is an excellent solution for any restaurant looking to modernize,
+            streamline processes, and scale effectively."</p>
+          <p class="fw-semibold mt-4">Kshatriya Foods, Hyderabad</p>
+          <img src="../../assets/imagesVideos/KshatriyaFoods1.webp" alt="" class=" rounded rounded-4 w-25 mt-3" >
+
+        </div>
+        <div class="col-6 text-center">
+          <img src="../../assets/imagesVideos/Serving1000.webp" alt="" class=" rounded rounded-4" style="width: 430px;">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="demo container" id="demotabhome">
+    <app-demo></app-demo>
+  </div>
+  <div class="contact mb-5">
+    <app-contact></app-contact>
+  </div>
+</div>

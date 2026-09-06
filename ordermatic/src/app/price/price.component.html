@@ -1,0 +1,124 @@
+<div class="pricenavbar">
+   <app-navbar (demotab)="demotab()"></app-navbar>
+ </div>
+<div class="pricing-wrapper mt-5">
+
+  <div class="herosectionPrice text-white text-center">
+    <h4 class="fw-semibold fs-1">All-in-One Features</h4>
+    <h4 class="fw-semibold fs-1">at the Best Price.</h4>
+    <p class="fs-5">Transparent and affordable pricing with zero hidden fees.</p>
+  </div>
+    <div class="pricing-container" style="margin-top: 260px;">
+
+        <!-- ============================= -->
+        <!-- KEY FEATURES COLUMN -->
+        <!-- ============================= -->
+
+        <div class="feature-column">
+
+            <!-- Feature Header -->
+            <div class="feature-header">
+
+                <h2>Key Features</h2>
+
+                <p>
+                    Features designed to match every
+                    business need:
+                </p>
+
+            </div>
+
+
+            <!-- Feature Names -->
+            <div
+                class="feature-row fs-6"
+                *ngFor="let feature of features">
+
+                {{ feature.name }}
+
+            </div>
+
+        </div>
+
+
+        <!-- ============================= -->
+        <!-- PLAN COLUMNS -->
+        <!-- ============================= -->
+
+        <div
+            class="plan-column"
+            *ngFor="let plan of plans; let planIndex = index">
+
+            <!-- Plan Header -->
+            <div class="plan-header">
+
+                <!-- Plan Name -->
+                <div class="plan-name">
+                    {{ plan.name }}
+                </div>
+
+
+                <!-- Plan Price -->
+                <div class="plan-price">
+
+                    <span>₹</span>{{ plan.price }}
+
+                </div>
+
+
+                <!-- Subtitle -->
+                <div class="plan-subtitle">
+                    per outlet + GST
+                </div>
+
+
+                <!-- Buy Button -->
+                <button
+                    type="button"
+                    class="buy-button">
+
+                    Buy Now
+
+                </button>
+
+            </div>
+
+
+
+            <div
+                class="feature-value-row"
+                *ngFor="let feature of features">
+
+                <!-- Feature Available -->
+                <span
+                    >
+
+                     ✓
+
+                </span>
+
+
+                <!-- Feature Not Available -->
+                <!-- <span
+                    *ngIf="!feature['pro' + (planIndex + 1)]"
+                    class="not-available">
+
+                    —
+
+                </span> -->
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+   <div class="demo container" id="demotabhome">
+     <app-demo></app-demo>
+    </div>
+    <div class="contact mb-5">
+      <app-contact></app-contact>
+    </div>
+  </div>

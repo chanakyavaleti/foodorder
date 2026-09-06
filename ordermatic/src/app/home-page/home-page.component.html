@@ -1,0 +1,93 @@
+<!-- <div class=""> -->
+  <video class="video_original" autoplay muted loop>
+    <source src="../../assets/imagesVideos/WhatsApp Video 2026-08-22 at 8.41.30 PM.mp4" type="video/mp4">
+  </video>
+  <div class="video">
+    <div class="home_page">
+      <div class="navbarhome">
+        <app-navbar (demotab)="demotab()"></app-navbar>
+      </div>
+      <div class="hero_section ">
+        <div class="hero1 d-flex flex-column justify-content-center align-items-center gap-2">
+          <h1 style="font-size: 3.5rem;">Stop payment fraud</h1>
+          <h1 style="font-size: 4.5rem;">Earn <span class="fn_or"> ₹30 Lakhs</span> more</h1>
+          <button class="btn_orange btn" (click)="demotab()">Book a Demo</button>
+        </div>
+        <div class="hero2 " style="margin-top: 120px;">
+          <div class="fn_or">Zero Fraud
+            <span class="ruppe">
+              ₹</span>
+            Max Profit
+          </div>
+        </div>
+        <div class="logo d-flex gap-5 mt-5">
+          <div class="logo-item" *ngFor="let item of logos">
+            <img [src]="item?.img" alt="" class="imageLogo">
+          </div>
+        </div>
+      </div>
+      <div class="" id="demotabhome">
+        <app-demo></app-demo>
+      </div>
+
+
+      <div class="HowOrderMaticWorks">
+
+        <div class="">
+          <h1 class="py-4 text-center">
+            How Ordermatic Works?
+          </h1>
+          <div class="video-wrapper1">
+            <iframe [src]="highlightvideo" title="YouTube video player" frameborder="0"
+              allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen>
+            </iframe>
+          </div>
+          <div class="videos d-flex gap-3 mt-4">
+            <img [src]="imgs.img" alt="" *ngFor="let imgs of videos" (click)="imgs.src && highlight(imgs?.src)"
+              [ngClass]="{'border border-2 border-danger' :imgs.src == highlightvideo?.changingThisBreaksApplicationSecurity}" />
+          </div>
+
+        </div>
+      </div>
+      <div class="customerTestimonials">
+        <h1 class="py-4 text-center">
+          Customer Testimonials
+        </h1>
+        <div class="customervideos container d-flex gap-3 mx-auto">
+          <div class="single" *ngFor="let screen of cusvideos">
+            <div class="imagescon">
+              <img [src]="screen.img" alt="" class="">
+              <div class="topname">
+                <p class="">{{screen?.name}}</p>
+              </div>
+              <div class="views d-flex justify-content-between  align-items-center">
+                <i class="ri-play-fill fs-2"></i>
+                <p class="viewsname">{{screen?.views}}M+ Views </p>
+              </div>
+
+            </div>
+            <div class="likesSection p-3 shadow">
+              <div class="top d-flex justify-content-between align-items-center">
+                <div class="left d-flex gap-3">
+                  <i class="ri-heart-3-line"></i>
+                  <i class="ri-chat-3-line"></i>
+                  <i class="ri-share-forward-line"></i>
+                </div>
+                <div class="right">
+                  <i class="ri-bookmark-line"></i>
+                </div>
+              </div>
+              <div class="bottom">
+                <p class="m-0 mt-1 fw-semibold">Click to View on Instagram</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="">
+          <app-contact></app-contact>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- </div> -->
